@@ -1,11 +1,7 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import { vercel } from "@t3-oss/env-nextjs/presets-zod";
 import { z } from "zod/v4";
 
-import { authEnv } from "@acme/auth/env";
-
 export const env = createEnv({
-  extends: [authEnv(), vercel()],
   shared: {
     NODE_ENV: z
       .enum(["development", "production", "test"])
@@ -16,7 +12,10 @@ export const env = createEnv({
    * This way you can ensure the app isn't built with invalid env vars.
    */
   server: {
-    POSTGRES_URL: z.url(),
+    // OpenRouter API Key for AI-powered readings (FREE from openrouter.ai)
+    OPENROUTER_API_KEY: z.string().min(1, "OpenRouter API key is required"),
+    // Postgres connection string (optional - used by postgres-js + drizzle)
+    POSTGRES_URL: z.string().url().optional(),
   },
 
   /**
@@ -24,15 +23,13 @@ export const env = createEnv({
    * For them to be exposed to the client, prefix them with `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    // No client-side env vars needed for this app
   },
   /**
    * Destructure all variables from `process.env` to make sure they aren't tree-shaken away.
    */
   experimental__runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   skipValidation:
     !!process.env.CI || process.env.npm_lifecycle_event === "lint",

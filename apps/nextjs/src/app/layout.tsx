@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Cinzel,
+  Cormorant_Garamond,
+  Geist,
+  Geist_Mono,
+} from "next/font/google";
 
 import { cn } from "@acme/ui";
 import { ThemeProvider, ThemeToggle } from "@acme/ui/theme";
@@ -46,6 +51,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
 });
+const ritualDisplay = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-ritual-display",
+  weight: ["400", "600", "700"],
+});
+const ritualText = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-ritual-text",
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
@@ -55,6 +70,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           "bg-background text-foreground min-h-screen font-sans antialiased",
           geistSans.variable,
           geistMono.variable,
+          ritualDisplay.variable,
+          ritualText.variable,
         )}
       >
         <ThemeProvider>
