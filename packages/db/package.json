@@ -29,7 +29,6 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@vercel/postgres": "^0.10.0",
     "drizzle-orm": "^0.44.7",
     "drizzle-zod": "^0.8.3",
     "zod": "catalog:"
@@ -38,9 +37,14 @@
     "@acme/eslint-config": "workspace:*",
     "@acme/prettier-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "dotenv": "^17.2.3",
     "drizzle-kit": "^0.31.5",
     "eslint": "catalog:",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
     "prettier": "catalog:",
+    "tsx": "^4.21.0",
     "typescript": "catalog:"
   },
   "prettier": "@acme/prettier-config"

@@ -1,0 +1,23 @@
+-- Seed questions for the Turning of the Year questionnaire
+
+-- Turning of the Year Questions (order 1-10)
+INSERT INTO question (text, options, "order", category) VALUES
+('I — The Burden: What was your main plot twist this year?', '["burden_atlas|The Atlas|Booked, responsible, carrying everyone", "burden_fog|The Fog|So many tabs, no clear next step", "burden_treadmill|The Treadmill|Busy but not forward", "burden_knots|The Knots|Entanglements and obligations", "burden_empty_cup|The Empty Cup|Pouring out with no refill", "burden_split_path|The Split Path|Too many options, no obvious yes"]', 1, 'turning_of_year'),
+
+('II — The Leak: Where did your energy disappear?', '["leak_cracked_vessel|The Cracked Vessel|Rest didn't really land", "leak_frayed_rope|The Frayed Rope|Motivation kept ghosting", "leak_dim_mirror|The Dim Mirror|Confidence dipped on repeat", "leak_closed_door|The Closed Door|Connection felt weirdly far", "leak_stolen_hours|The Stolen Hours|Time vanished into errands", "leak_loose_structure|The Loose Structure|Routines fell apart by Wednesday"]', 2, 'turning_of_year'),
+
+('III — The Survival Skill: Your go-to coping mode?', '["survival_endurer|The Endurer|Grit, even when it wasn't cute", "survival_hermit|The Hermit|Hide, recover, regroup", "survival_mask|The Mask|Look fine, feel not-fine", "survival_juggler|The Juggler|Busy as a coping skill", "survival_thinker|The Thinker|Overthinking for safety", "survival_anchor|The Anchor|One steady thing held you up"]', 3, 'turning_of_year'),
+
+('IV — The Shadow Cost: What did it quietly cost?', '["shadow_lead_limbs|The Lead Limbs|The fatigue is real", "shadow_still_water|The Still Water|Stuck in a loop", "shadow_empty_room|The Empty Room|Lonely even with people", "shadow_doubting_voice|The Doubting Voice|Second-guessing everything", "shadow_tight_chest|The Tight Chest|Pressure lived in your body", "shadow_itch|The Itch|Restless, but unsure what next"]', 4, 'turning_of_year'),
+
+('V — The Missing Medicine: What would've changed the game?', '["medicine_guide|The Guide|Accountability + a plan", "medicine_feather|The Feather|Less pressure, more ease", "medicine_wheel|The Wheel|Momentum that sticks", "medicine_hearth|The Hearth|Warmth and belonging", "medicine_lantern|The Lantern|Clear, simple direction", "medicine_stone|The Stone|Stability you can count on"]', 5, 'turning_of_year'),
+
+('VI — The Way Help Works: What format actually helps?', '["help_schedule|The Schedule|Set times, no guessing", "help_open_door|The Open Door|Drop in, low-pressure", "help_table|The Table|Doing it with others", "help_thread|The Thread|1:1 support", "help_teacher|The Teacher|A coach or class", "help_solo_path|The Solo Path|Self-paced, no pressure"]', 6, 'turning_of_year'),
+
+('VII — The Boundary Spell: What are we not doing in 2026?', '["boundary_overfull_cup|The Overfull Cup|Overgiving on autopilot", "boundary_lone_wolf|The Lone Wolf|Doing everything alone", "boundary_someday_scroll|The Someday Scroll|Waiting to feel ready", "boundary_firestorm|The Firestorm|Reactive chaos", "boundary_people_pleaser|The People-Pleaser|Smoothing everything for everyone", "boundary_all_or_nothing|The All-or-Nothing Blade|Perfection or silence"]', 7, 'turning_of_year'),
+
+('VIII — The North Star: What do you want 2026 to feel like?', '["north_star_strong_body|The Strong Body|Vital, strong, steady", "north_star_open_heart|The Open Heart|Warm, connected, seen", "north_star_true_line|The True Line|Clear, aligned direction", "north_star_playful_spirit|The Playful Spirit|Fun that refills you", "north_star_steady_ground|The Steady Ground|Stable, reliable routines", "north_star_speaking_voice|The Speaking Voice|Expressive and visible"]', 8, 'turning_of_year'),
+
+('IX — The First Gate: Where should momentum start?', '["first_gate_body|The Body Gate|Movement, health, energy", "first_gate_time|The Time Gate|Routines and calendar", "first_gate_circle|The Circle Gate|Dating, social, connection", "first_gate_skill|The Skill Gate|Skills and confidence", "first_gate_space|The Space Gate|Your environment shapes you", "first_gate_mind|The Mind Gate|Mindset + clarity"]', 9, 'turning_of_year'),
+
+('X — The Emerging Archetype: Who are you becoming?', '["archetype_rebuilder|The Rebuilder|Repair, renew, rebuild", "archetype_steady_flame|The Steady Flame|Consistency over chaos", "archetype_connector|The Connector|Community and bonds", "archetype_explorer|The Explorer|New paths, new stories", "archetype_self_leader|The Self-Leader|Agency and boundaries", "archetype_beginner|The Beginner (Again)|Fresh starts, kinder rules"]', 10, 'turning_of_year');
